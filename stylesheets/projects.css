@@ -1,0 +1,97 @@
+#stickyalias {
+display: none;
+height: 10px;
+}
+
+ul.navi_bar {
+list-style-type: none !important;
+margin: 0px 23px ;
+padding: 0px ;
+width: 150px ;
+background-color: #FFFFFF ;
+/*
+background-color: #f1f1f1 ;
+border: 1px solid black;
+*/
+}
+
+ul.navi_bar li {
+list-style-type: none ;
+padding-left: 0px ;
+text-align: left ;
+/*    border-bottom: 1px solid black; */
+}
+
+/*
+ul.navi_bar li:last-child {
+border-bottom: none ;
+}
+*/
+
+ul.navi_bar li a {    
+display: block ;
+color: blue ;   
+/* color: #000 ;  */
+padding: 5px 10px;
+text-decoration: none ;
+font-weight: bold;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+ul.navi_bar li a.active {
+background-color: #191970 ;
+color: white ;
+}
+
+ul.navi_bar li a:hover:not(.active) {
+background-color: #000 ;
+color: white ;
+}
+
+a.main {
+color: blue ;
+}
+
+a.main:hover {
+text-decoration: underline ;
+}
+
+div.top_banner {
+text-align: center; width: 100%; font-family: Baskerville Old Face; /*  width: inherit*/
+}
+div.wrap-all{
+display: block; margin: 30px auto; background-color: white; width: 1010px ;     /* width: 70% ; min-width: 1010px ;  margin: 30 100;  margin-right: 100; margin-left: 100;   */
+}
+div.left{
+display: inline-block; margin: 0 auto; width:190px; vertical-align: top;     /* text-align: left; */
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 18px;
+}
+div.right{
+display: inline-block;  margin: 0px 0px; width:210px; vertical-align: top; text-align: center; /*float: right;*/  /* for some reason the width can't reach 1000px or else the rightmost "div" will be pushed down a line. */
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 20px;
+}
+div.center{
+display: inline-block; margin: 0px 0px; width:600px;
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 20px;
+}
+
+
+h3 {
+color: black;
+}
+
+
+/*
+ul.inbody{
+margin-left: 35px;
+padding-left: 2px;
+}
+a.underline_r:hover {
+text-decoration: underline ; color: red
+}
+a.underline_b:hover {
+text-decoration: underline ; color: blue
+}
+*/
+p.list{text-indent:25px; line-height:0.7;
+}

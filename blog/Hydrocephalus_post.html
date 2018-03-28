@@ -1,0 +1,71 @@
+<center><span style="line-height:1.5;"><h2> <a class="mainhead" href="https://regriver.github.io/aidris/blog/Hydrocephalus.html"> In Vitro Determination of Implanted Medical Shunt Function Via Optics</a></h2></span></center>
+
+<p>Today I will be discussing a Bioengineering team project I completed a little over half a year ago. The project was a capstone project wherein we succeeded in establishing an in vitro method for characterizing the functional state of implanted medical shunt devices. Because the method is in vitro, we used synthetic skin to mimic real human skin. Hydrocephalus is a condition where an accumulation of cerebrospinal fluid (CSF) gives rise to an increased cranial pressure. Excess fluid can be discharged through the use of a surgically placed ventriculoperitoneal (VP) shunt to relieve this condition. VP shunts are prone to proximal and distal blockages of the catheter. Previous studies have shown that micron displacements occurring inside the shunt are proportional to different flow conditions. This study investigated an optical method, interferometry, to detect these displacements. A Michelson Interferometer was constructed and was able to detect distinct differences in fluid flow for normal flow, proximal blockage, and distal blockage conditions.
+
+</p>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/shunt_implant.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 1: Shunt implant location with respect to ventricles and close up schematic of shunt reservoir and valve. </figcaption>
+</figure><br>
+
+<p>As CSF builds up in the ventricles, the pressure created is used as a driving force to move the fluid from the ventricles into the ventricular catheter, where the fluid stores up in a reservoir until it gains enough pressure to flow out throught the shunt valve and into the peritoneal catheter. The fluid is then drained into the peritoneal space where it can be reabsorbed by surrounding tissue. In our experiment, we used a hydrostatic pump to generate pressure buld up, the pump was essentially just a rotating arm on an elevated surface. The arm was activated by a motor which ran on a 5 volt battery and acheived a roughly physiological condition by attaining a frequency of 1Hz.
+</p>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/inf.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 2: Interferometer set up (Left) and the basic principle of a Michelson Interferometer (Right). </figcaption>
+</figure><br>
+
+<p>The interferometer consisted of a 532 nm class two, Collimated green laser diode module, a Plano-convex lens with a focal length of 15 mm, optical breadboard and mounts. We used a 50% beam splitter and a Medtronic medical shunt. The initial feasibility testing of the idea was conducted using a Laser Doppler Vibrometer (LDV). The reason for this was that a method for the detection of shunt valve oscilation had already been accomplished by ultrasound, however, the method was not efficient since ultrasound required an exact placement of the transducer for a signal to be detected. We rationalized that if ultrasound could detect the signal, then perhaps interferometry could. The LDV results can be seen in Figure 3 below. The LDV signal is of the proximal blockage of the shunt, which was simulated by clipping the shunt on its proximal catheter. You can clearly differentiate between the blockage and the normal flow condition simply based on apparent signal amplitude.
+</p>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/LDV.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 3: Laser Doppler Vibrometer detection of proximal blockage. </figcaption>
+</figure><br>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/test_bed.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 4: Piezo electric chip acheiving a displacement of 0.4 microns. </figcaption>
+</figure><br>
+
+<p>Since an LDV is a very expensive piece of equipment, it was important that we develop a cheap end efficient method of detection. We began by testing our Michelson on a piezo eletric chip as a test bed for the shunt as shown in Figure 4. The piezo chip oscillated acheived a 0.4 micron displacement, which was detectable by our interferometer. This proved to us that we would certainly be able to detect the shunt valve ascillation which aceived a 2.4 micron displacement, according to our ultrasound technique. The major difficulty in switching from LDV to interferometry was the fact that LDV employs a bragg cell, making the measurement one of frequency while interferometry uses phase based measurements. To get around this, we used a reflective surface over the shunt surface, which we simply glued on to the surface and noticed a signal immediately.
+</p>
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/normal.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 5: Voltage v. time plot of normal flow conditions through the shunt valve. </figcaption>
+</figure><br>
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/proximal.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 6: Signal attenuation resulting from normal flow followed by a proximal blockage. </figcaption>
+</figure><br>
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/distal.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 7: Normal flow condition followed by proximal blockage. Note the three different regions. </figcaption>
+</figure><br>
+
+<p>The data acquisition was done using LabView software. The output was taken from a Lecroy oscilloscope using a GPIB cable to the desktop and further analysis was done on MATLAB. The three plots above show the characteristic signals attained during the three flow conditions in question. Figures 6 and 7 have blockage induced at exactly 15 seconds into the experiment. In the case of the proximal blockage, the signal is drastically attenuated since there is less oscillation of the valve given that the blockage has occured before the shunt. When the pressure is released at 30 seconds, the voltage amplitude begins to rise to its original state. The distal blockage condition behaves differently however. Because fluid is already flowing through the valve, there is a bit of a time lag from the point of blockage at 15 seconds to the attenuation of the signal. The signal for distal blockage is more irregular.
+</p>
+
+<center><img src="https://regriver.github.io/aidris/blog/peaks_analysis.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 8: Peak analysis carried out on signals attained. Red circles indicate the regions being analyzed. Notice that only regions after blockage are analyzed for the two blockage situations. </figcaption>
+</figure><br>
+
+<center><img src="https://regriver.github.io/aidris/blog/mean_variance.jpg" width="65%" height="30%" /></center>
+<figcaption>Figure 9: calculated values of mean and varience fromt the regions outlined in Figure 8. </figcaption>
+</figure><br>
+
+<center>  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nPRuWPewwU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<vidcaption>Figure 10: Video of Data acquisition via Lecroy oscilloscope, preprocessing. </vidcaption>
+</center>
+<br>
+
+<p>The three signals were analyzed for mean and varience. This was to demonstrate further differences between normal, proximal and distal flow conditions. It is clear from the graphs Figure 9 that the mean of the normal flow and the distal blockage signals was very similar while the mean of the proximal blockage signal was much lower. The pattern almost seems to persist when variance is calculated, however, it turns out that there is more variation in the distal blockage than any of the other two conditions. This speaks to the eratic nature of the flow during distal blockage. The video is also attached to show the nature of data acquisition in realtime, ensuring the authenticity of this data.</p>
+
+
+<center><em>to be continued ...</em></center>
+
+<p class="stamp">Posted: May 26, 2017
+</p>

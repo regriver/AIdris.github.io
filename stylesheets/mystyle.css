@@ -1,0 +1,262 @@
+body {
+color: black;
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; 
+font-size: 18px;
+overflow: auto;
+background: url("https://regriver.github.io/aidris/dna_origami.jpg") no-repeat 50% 1%;
+background-attachment: fixed ;
+background-size: 200% 200%;
+}
+
+#stickyalias {
+display: none;
+height: 10px;
+}
+
+ul.navi_bar {
+list-style-type: none !important;
+margin: 0px 23px ;
+padding: 0px ;
+width: 150px ;
+background-color: #FFFFFF ;
+/*
+background-color: #f1f1f1 ;
+border: 1px solid black;
+*/
+}
+
+ul.navi_bar li {
+list-style-type: none ;
+padding-left: 0px ;
+text-align: left ;
+/*    border-bottom: 1px solid black; */
+}
+
+/*
+ul.navi_bar li:last-child {
+border-bottom: none ;
+}
+*/
+
+
+ul.navi_bar li a {    
+display: block ;
+color: blue ;   
+/* color: #000 ;  */
+padding: 5px 10px;
+text-decoration: none ;
+font-weight: bold;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+a.dropbtn {    
+display: block ;
+width: inherit;
+}
+
+ul.navi_bar li a.active {
+background-color: #191970 ;
+color: white ;
+}
+
+ul.navi_bar li a:hover:not(.active) , .dropd:hover .dropbtn{
+background-color: #000 ;
+color: white ;
+}
+
+.dropdown-contents {
+display: none ; /* don't show the block until mouse hovers over */
+position: absolute ;
+background-color: #ADD8E6;
+width: inherit; 
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+font-size: 14px;
+}
+
+.dropdown-contents a {
+display: block;
+width: inherit;
+}
+
+.dropd:hover .dropdown-contents {
+display: block;
+}
+.dropdown-contents a:hover {
+  background-color: #00BFFF;
+}
+
+a.main {
+color: blue ;
+}
+a.mainhead {
+	color: black;
+}
+
+a.main:hover, a.mainhead:hover {
+text-decoration: underline ;
+}
+
+#cv_image {
+border: 1px solid black ;
+}
+
+/*
+#github_link {
+padding: 10px ;
+}
+*/
+/*
+#explanation {
+margin: 0 auto ;
+}
+*/
+div.cv_container {
+overflow: scroll ; width: 100% ;  height: 700px ;
+}
+/*
+div.bkg {
+background-image: url("http://mwilson1.github.io/Earth_background.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: top center;
+   background-size: 100% 100%; commented 
+}
+*/
+
+div.top_banner {
+text-align: center; width: 100%; font-family: Baskerville Old Face; /*  width: inherit*/
+}
+div.wrap-all{
+display: block; margin: 30px auto; background-color: white; width: 1010px ; min-height: 700px;     /* width: 70% ; min-width: 1010px ;  margin: 30 100;  margin-right: 100; margin-left: 100;   */
+}
+div.left{
+display: inline-block; margin: 0 auto; width:190px; vertical-align: top;     /* text-align: left; */
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 18px;
+}
+div.right{
+display: inline-block;  margin: 0px 0px; width:210px; vertical-align: top; text-align: center; /*float: right;*/  /* for some reason the width can't reach 1000px or else the rightmost "div" will be pushed down a line. */
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 18px;
+}
+div.center{
+display: inline-block; margin: 0px 0px; width:600px; 
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 18px;
+}
+
+div.centerblog{
+display: inline-block; margin: 0px 0px; width:600px;
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 18px;
+text-indent: 25px;
+text-align: justify;
+text-justify: inter-word;
+}
+
+/*
+div.clear{
+clear: both;
+}
+*/
+section.blogpost{
+	display: block; 
+	margin: 0px 0px; 
+	width: 100%;
+}
+
+div.rcorners {
+    border-radius: 25px;
+    border: 2px solid #C0C0C0;
+    padding: 10px; 
+    width: 100%;
+}
+
+p.stamp{
+	color:#C0C0C0;
+  	text-indent: 0px;
+}
+/*
+p.post{
+	text-indent: 25px;
+	text-align: justify;
+    text-justify: inter-word;
+}
+*/
+
+div.sidefigs{
+	float: right; 
+	display: inline-block; 
+	width: 230px;
+}
+
+#sidefig { /* for the <figure> tag */
+	padding-right: 20px
+}
+figure img {
+vertical-align: top;
+}
+figure figcaption {
+text-align: center;
+font-size: 15px;
+}
+vidcaption {
+	font-size: 15px;
+}
+
+
+
+ul.central{ /* For blogarchive and Research*/
+margin-left: 35px;
+padding-left: 2px;
+}
+
+div.shortwebpage{ /* Have this surround the footer tags */
+  display: table-cell; 
+  height: 200px; 
+  width: inherit; 
+  vertical-align: bottom;
+}
+
+p.ind {
+  text-indent: 25px;
+}
+
+h2.content{
+  color: black; 
+  text-align: left; 
+  text-decoration: underline;
+}
+
+img.gifclicker {
+border: 3px solid white;
+}
+img.gifclicker:hover {
+border: 3px solid #A9A9A9;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: none;
+    background-color: #000;
+    /* JUST RESIZE IMAGE */
+    /*
+    background: url("https://mwilson1.github.io/Earth_background.jpg") no-repeat 50% 1%;
+    background-color: #000;
+    background-attachment: fixed ;
+    background-size: 767px 100%;
+    */
+    /*
+      background-image: url("https://mwilson1.github.io/Earth_background.jpg"); 
+    background-color: #000;  
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-attachment: fixed;       
+      webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; 
+      min-height: 100vh;
+    */
+    overflow: visible;
+
+  }
+  /*html{height:100vh; width:100vw;} */
+}

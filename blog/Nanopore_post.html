@@ -1,0 +1,51 @@
+<center><span style="line-height:1.5;"><h2> <a class="mainhead" href="https://regriver.github.io/aidris/blog/Nanopore.html"> Genia-Roche Nanopore Simulation</a></h2></span></center>
+
+
+<p>At the Church Lab at Harvard Medical School, I was involved in the development of the Roche alpha-hemolysine, seven subunit nanopore. Here I was able to develop a suite of code on the MD software ceveloped by Avi Robinson-Mosher. The project I took on was to m
+</p>
+
+<p> The Genia-Roche nanopore began as conjugated protein systems, modulating DNA tag capture and release events via a dephosphorylation cleavage mechanism. The Genia-Roche nanopore consists of a seven subunit alpha-hemolysine. Attached to a single subunit
+is the amino acid linker whhich is also attached to the spy-catcher and spy-tag protein complex. The complex is further attached to the polymerase, the work horse of sequencing, via a continued amino acid linker. Each dna nucleotide is tagged with a unique identification tag, which consists of about thirty nucleotides in a sequence unique to each of the four ddNTPs (a terminal dideoxynucleotide).
+The principle is that upon a tag capture event, the tag blocks the nanopore, decreasing the current reading across the pore to a level below the baseline that is unique for that tag and once cleavage occurs, the current will return back to its baseline. The Shapesifter software uses spheres to approximate molecular bodies using a random walk approximation which takes the current location of an object's center of mass and given conditons like temperature, force type (in this case I am simulating simple Brownian motion), and various constraints, calculates the condition of a given predicate for each time step in a simulation's evolution.
+The value that is the predicate for the purpose of this experiment was distance. In the video below, the center of mass of the phi-29 is monitored for each evolution step and the distance of this center to the center of the seven subunit pore is calculated and recorded per time step. 
+</p>
+
+<center> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhzO9z1bKw0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<vidcaption>Figure 1: Coarse grain MD simulation of seven subunit alpha hemolysine conjugated to spy-catcher/spy-tag and Phi 29 polymerase. The program operates by parsing a JSON formated input file, specifying conditions and constrains. This is a video of the experimental baseline, measured object sizes of the actual nanopore system.</vidcaption>
+</center>
+<br>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/system_works.jpg" width="500px"/></center>
+<figcaption>Figure 2: The top image shows the  characteristic nucleotides and the unique tags associated with each. The trace at the bottom is a time trace of the events occuring within the nanopore. It provides a visual outline of the tag capture and release events.</figcaption>
+</figure>
+<br>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/problems_to_solve.jpg" width="500px"/></center>
+<figcaption>Figure 3: The following figure is actual, realtime DAQ from the Genia-Roche nanopore acuired during testing. While the above figure demostrates an idealized case, this figure is the reality of how the nanopore actually functions. </figcaption>
+</figure>
+<br>
+
+<p>The output of the nanopore reading is a trace of current, in miliamps over time in seconds. When there is no tag has been captured by the polymerase, the current rests at a constant baseline. When the capture even occurs, there is a dip in the current baseline for the duration of time that after capture and before cleavage. The current then returns to baseline after cleavage occurs.
+However, the events depicted in Figure 2 are idealized simply for theoretical understanding. The challenges facing the Genia-Roche pore can more clearly be understood through Figure 3. In this figure, we can understand the vareity that exists within our system. Firstly, the capture events vary widely, and while this may not be an issue, it underlines the reality of tag capture mechanics. Along with varying capture duration, "stutter" events appear throughout the data acquisition. Sometimes during the capture event, the current will momentarily return to the base line for a period of time before returning to the lower current level just before translocation. The speculation is that since the amino acid linker can be made of any combination of amino acids, it is possible that its constitution may greatly influence stutter events. My experiments demonstrated that given a coarse grain simulaition, varying linker constitution. 
+</p>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/experiment_design.jpg" width="600px"/></center>
+<figcaption>Figure 4: The experiment defines linker length and linker sterics as L and D respectively. Nine total cases were tested with one case being the central case, the original configuration of the system and the remaining eight cases were deviations from the central case by a factor of two. </figure>
+<br>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/results.jpg" width="600px"/></center>
+<figcaption>Figure 5: Results depicting deviation from the central case, linker sterics remains the same, but linker length is changed. </figcaption>
+</figure>
+<br>
+
+<p>The experiment was designed to show evidence of significant deviation from the central base case. This case is the condition in Figure 4 indicated by the check mark. The experiment isolates linker variables of flexibility and lenth by defining linker flexibility as a function of steric hinderance which varies among amino acids. This was simulated by the spherical radii of amino acid molecules, simulated by the smallest spherical objects. Linker length was modeled by the overall distance between the linker attachment point at the hemolysine subunit to the the attachment point at the phi-29 polymerase. We were able to simulate length by adding more amino acids to to the increased lenth, The assumption was that since sterics came from the R group and that since amino acids generally have the same width in the direction perpendicular to the R group, as long as radius of amino acids is kept constant, increasing the L value would not affect the steric factor D. The results of Figure 5 show the horizontal situation where D is kept constant and L is altered. The key take away here is that the length of the linker clearly affected the mean value: the longest linker had a higher mean while the shorter linker had a lower mean.
+</p>
+
+<br>
+<p class="stamp">Posted: September 1, 2017
+</p>

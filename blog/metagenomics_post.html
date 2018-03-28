@@ -1,0 +1,44 @@
+<center><span style="line-height:1.5;"><h2> <a class="mainhead" href="https://regriver.github.io/aidris/blog/metagenomics.html"> Metagenomics Analysis Pipeline Using MOTHUR</a></h2></span></center>
+
+<p>The pipeline I created four years ago, titled HealthIQ, accepts two fasta files and performs customizable metagenomics analyses using
+the metagenomics tool MOTHUR. The output is a text file composed of names corresponing to every organism found in the pool of genomes.
+three files result from my customized analysis, one corresponding to the organisms that are unique to the first metagenomic finger print,
+the second to the organisms that are unique to the second metagenomic finger print, and the third file corresponds to the organisms
+shared between the two inputs.
+</p>
+
+This is the local database on which I hosted this tool on my computer at the time.
+
+<center> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pcACY_sDDAQ" frameborder="0" allowfullscreen></iframe>
+<vidcaption>Figure 1: Full metagenomic analysis and pipeline.</vidcaption>
+</center>
+<br>
+
+<p>I used the XAMPP server to host the pipeline locally. After mother analysis the output if visualized on various sector graphs
+using the interactive sector graph, Krona, which was developed by Brian Ondov. The intermediary visualization is a Venndiagram 
+displaying the analysis outputs. 
+</p>
+
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/virtual_venn.PNG" width="600px" height="250px" /></center>
+<figcaption>Figure 2: Virtual venndiagram display of comparisons between two distinct metagenomic signatures.</figcaption>
+</figure><br>
+<figure>
+<center><img src="https://regriver.github.io/aidris/blog/krona.PNG" width="600px" height="450px" /></center>
+<figcaption>Figure 3: Krona chart displaying contents of fasta file 28190.fa (gut microbiome of patient one).</figcaption>
+</figure><br>
+
+<p>Figures 2 and 3 show key components of the analysis pipeline. The example shown here is of two fasta files acquired from the CAMERA
+genomics database of two patients. One considered to be lean and the other considered to be obese. These patient samples contain 16sRNA 
+sequences corresponding corresponding to a multitude of bacterial genomes in each patient's gut microbiome. The two microbiomes are analyzed
+using a MOTHUR workflow which I designed and can be seen breifly in the video above. The output of the workflow is three files of bacteria
+identified to be in the gut of patient 28190 and patient 28611 as well as the bacterial genomes chared by the two patients 
+(both classified and unclassified).
+</p>
+
+<center><em>to be continued ... </em></center>
+
+
+<p class="stamp">Posted: June 18, 2017
+</p>

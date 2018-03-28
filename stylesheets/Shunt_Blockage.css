@@ -1,0 +1,185 @@
+#stickyalias {
+display: none;
+height: 10px;
+}
+.rotateimg180 {
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.rotateimg90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+ul.navi_bar {
+list-style-type: none !important;
+margin: 0px 23px ;
+padding: 0px ;
+width: 150px ;
+background-color: #FFFFFF ;
+/*
+background-color: #f1f1f1 ;
+border: 1px solid black;
+*/
+}
+
+ul.navi_bar li {
+list-style-type: none ;
+padding-left: 0px ;
+text-align: left ;
+/*    border-bottom: 1px solid black; */
+}
+
+
+ul.navi_bar li a, .dropbtn {    
+display: block ;
+color: blue ;   
+/* color: #000 ;  */
+padding: 5px 10px;
+text-decoration: none ;
+font-weight: bold;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+} 
+
+ul.navi_bar li a:hover, .dropd:hover .dropbtn {
+background-color: #000 ;
+color: white ;
+/* Good Idea but not pretty
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+}
+
+li.dropd {
+display: inline-block;
+}
+
+.dropdown-contents {
+display: none ;
+position: absolute ;
+background-color: #ADD8E6;
+min-width: 100px; /* font-size matters more than this */
+max-width: 150px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+font-size: 14px;
+color: green; /* not working */
+}
+
+.dropdown-contents a {
+color: green ; /* not working */
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+.dropdown-contents a:hover {color: green; background-color: #00BFFF}
+
+.dropd:hover .dropdown-contents {
+display: block;
+}
+
+
+a.main {
+color: blue ;
+}
+
+a.main:hover {
+text-decoration: underline ;
+}
+
+div.top_banner {
+text-align: center; width: 100%; font-family: Baskerville Old Face; /*  width: inherit*/
+}
+div.wrap-all{
+display: block; margin: 30px auto; background-color: white; width: 1010px ;     /* width: 70% ; min-width: 1010px ;  margin: 30 100;  margin-right: 100; margin-left: 100;   */
+}
+div.left{
+display: inline-block; margin: 0 auto; width:190px; vertical-align: top;     /* text-align: left; */
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 18px;
+}
+div.right{
+display: inline-block;  margin: 0px 0px; width:210px; vertical-align: top; text-align: center; /*float: right;*/  /* for some reason the width can't reach 1000px or else the rightmost "div" will be pushed down a line. */
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 20px;
+}
+div.center{
+display: inline-block; margin: 0px 0px; width:600px;
+font-family: TimesNewRoman,Times New Roman,Times,Baskerville,Georgia,serif; font-size: 20px;
+}
+
+h2.content{
+color: black; text-align: left; text-decoration: underline;
+ }
+
+/* id with class won't work 
+#bullets {
+padding-left: 2px;
+}
+*/
+/*
+ul li{
+padding-left: 2px;
+}
+*/    
+
+ul.content {
+text-align: left;
+ }
+ul.content li {
+margin: 0 20px;
+padding-left: 2px;
+ }
+
+
+figure {
+display: inline-block;
+}
+figure img {
+vertical-align: top;
+}
+figure figcaption {
+text-align: center;
+}
+
+
+div.two_images {
+float: right; display: inline-block; width: 260px;
+}
+
+ol {counter-reset: item; text-align: left;}
+ol li {
+list-style: none; margin: 0 30px;
+ }
+ol li.slides:before {
+content: counter(item) ") ";
+counter-increment: item;
+font-size: 18px;
+font-weight: bold;
+font-family: arial;
+/* color: #222222;  */
+color: red;
+}
+ol li.norm:before {
+content: counter(item) ") ";
+counter-increment: item;
+font-size: 18px;
+font-weight: bold;
+font-family: arial;
+color: #222222;
+ }
+
+p.list{text-indent:25px; line-height:0.7;
+ }
+p.left{text-align:left; text-indent:25px;
+}
+
+
+img.clicker {
+border: 3px solid white;
+}
+img.clicker:hover {
+border: 3px solid #A9A9A9;
+}

@@ -1,0 +1,33 @@
+div.leftcol {
+	display:inline-block; 
+	width: 295px;
+}
+
+div.rightcol {
+	display:inline-block; 
+	width: 295px; 
+	/* vertical-align: top; */
+	margin-left:5px;
+}
+
+img.im_link {
+border: 3px solid white;
+}
+
+img.im_link:hover {
+border: 3px solid black;
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+	div.leftcol {
+		width: 290px;
+	}
+
+	div.rightcol {
+		width: 290px; 
+		/* vertical-align: top; */
+		margin-left:5px;
+	}
+	}
